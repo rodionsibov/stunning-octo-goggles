@@ -208,3 +208,46 @@ img {
 .card__button:hover {
     box-shadow: 0 12px 24px hsla(var(--hue-color), 97%, 54%, .2);
 }
+
+@media screen and (max-width: 320px) {
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+    .card__content {
+        padding: 2rem 1.25rem;
+        border-radius: 1rem;
+    }
+}
+
+@media screen and (min-width: 568px) {
+    .card__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card__content {
+       grid-template-rows: repeat(2, max-content);
+    }
+    .card__button {
+        align-self: flex-end;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card {
+        height: 100vh;
+        align-items: center;
+    }
+    .card__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card__header-circle {
+        margin-bottom: var(--mb-1-25);
+    }
+    .card__header-subtitle {
+        font-size: var(--small-font-size);
+    }
+}
